@@ -21,20 +21,15 @@ int main(void)
 	long long n;
 	fibo[0] = 0;
 	fibo[1] = 1;
-
+	fibo[2] = 1;
 	scanf("%lld", &n);
-
-	for (int i = 0; i < 10 -1; i++)
-	{
-		fibo[i + 2] = (fibo[i] + fibo[i + 1])%mod;
-	}
 
 	printf("%lld", formula(n));
 	return 0;
 }
 long long formula(long long n)
 {
-	if (n <= 10)	//brute force
+	if (n < 3)	//brute force
 	{
 		return fibo[n]%mod;
 	}
